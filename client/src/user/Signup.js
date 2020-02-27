@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../core/Layout';
 import { signup } from '../auth';
 import Menu from "../core/Menu";
-import Signin from './Signin'
+
 
 
 
@@ -42,77 +42,32 @@ const Signup = () => {
     };
 
     const signUpForm = () => (
-        <form noValidate>
-
-            <div id='in' className="container register mb-5 h-75">
-                <div className="row">
-                    <div className="col-md-3 register-left">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
-                        <h3>Welcome</h3>
-                        <p>Please enter to purchase with Us</p>
-
-                    </div>
-                    <div className="col-md-9 register-right">
-                        <ul className="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                            <li className="nav-item">
-                                <a className="nav-link lin active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Register</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link lin" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
-                            </li>
-                        </ul>
-                        <div className="tab-content" id="myTabContent">
-                            <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 className="register-heading mt-5 mb-1">Register</h3>
-                                <div className="row register-form mt-0">
-                                    <div className="col-md-12">
-                                        <div className="form-group">
-                                            <input
-                                                onChange={handleChange('name')}
-                                                type="text"
-                                                className="form-control"
-                                                placeholder="Name *"
-                                                value={name}
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <input
-                                                onChange={handleChange('email')}
-                                                type="email"
-                                                className="form-control"
-                                                placeholder="Email *"
-                                                value={email}
-                                            />
-                                        </div>
-                                        <div className="form-group">
-                                            <input
-                                                onChange={handleChange('password')}
-                                                type="password"
-                                                className="form-control"
-                                                placeholder="Password *"
-                                                value={password}
-                                            />
-                                        </div>
-                                        <input
-                                            onClick={clickSubmit}
-                                            type="submit"
-                                            className="btnRegister"
-                                            value="Register" />
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div className="tab-pane fade show"
-                                id="login" role="tabpanel" aria-labelledby="login-tab">
-                                <Signin />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </form>
+       
+  <form id='form-s'>
+  <label className='label'>
+      <p className="label-txt">Name</p>
+      <input  onChange={handleChange('name')} type="text" className="input"  value={name} />
+      <div className="line-box">
+        <div className="line"></div>
+      </div>
+    </label>
+    <label  className='label'>
+      <p className="label-txt">Email</p>
+      <input onChange={handleChange('email')} type="email" className="input" value={email} />
+      <div className="line-box">
+        <div className="line"></div>
+      </div>
+    </label>
+    
+    <label  className='label'>
+      <p className="label-txt">Password</p>
+      <input  onChange={handleChange('password')} type="text" className="input" value={password} />
+      <div className="line-box">
+        <div className="line"></div>
+      </div>
+    </label>
+    <button className='button' onClick={clickSubmit} type="submit">Register</button>
+  </form>
     );
 
     const showError = () => (
@@ -132,7 +87,7 @@ const Signup = () => {
             <Menu />
             <div className="container col-md-8 offset-md-2">
                 <div className='text-center mt-3'>
-                    <h1>Register/Login</h1>
+                    <h1 className='title'>Register</h1>
 
                 </div>
                 {showSuccess()}

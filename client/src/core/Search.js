@@ -79,11 +79,12 @@ const Search = () => {
     };
 
     const searchForm = () => (
-        <form  onSubmit={searchSubmit}>
-            <span className="input-group-text bg-white">
+        <form onSubmit={searchSubmit}>
+            <span id='s-form'   className="input-group-text bg-white">
                 <div className="input-group input-group-lg ">
                     <div className="input-group-prepend">
                         <select
+                        id='s-inputs'
                             className="btn mr-2"
                             onChange={handleChange("category")}
                         >
@@ -97,6 +98,7 @@ const Search = () => {
                     </div>
 
                     <input
+                    id='s-input'
                         type="search"
                         className="form-control p-1"
                         onChange={handleChange("search")}
@@ -104,10 +106,11 @@ const Search = () => {
                     />
                 </div>
                 <div
+                id='s-btn'
                     className="btn input-group-append"
                     style={{ border: "none" }}
                 >
-                    <button className="input-group-text bg-success text-light">Search</button>
+                    <button  className="input-group-text bg-success text-light">Search</button>
                 </div>
             </span>
         </form>

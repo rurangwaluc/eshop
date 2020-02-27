@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 // import Layout from "../core/Layout";
-// import Menu from "../core/Menu";
+import Menu from "../core/Menu";
 import Spinner from 'react-bootstrap/Spinner';
 
 
@@ -43,39 +43,25 @@ const Signin = () => {
 
     const signUpForm = () => (
 
-        <form>
-            <div className="row register-form">
-
-                <div id='in' className="col-md-12">
-                    <h3 className="register-h mb-3">Login</h3>
-
-                    <div id='f' className="form-group ">
-                        <input
-                            onChange={handleChange("email")}
-                            type="email"
-                            className="form-control "
-                            placeholder="Email *"
-                            value={email} />
-                    </div>
-                    <div id='f' className="form-group">
-                        <input
-                            onChange={handleChange("password")}
-                            type="password"
-                            className="form-control"
-                            placeholder="Password *"
-                            value={password}
-                        />
-                    </div>
-                    <input
-                        onClick={clickSubmit}
-                        type="submit"
-                        className="btnRegister "
-                        value="Login" />
-
-                </div>
-            </div>
-
-        </form>
+         
+  <form id='form-s'>
+    <label  className='label'>
+      <p className="label-txt">Email</p>
+      <input onChange={handleChange('email')} type="email" className="input" value={email} />
+      <div className="line-box">
+        <div className="line"></div>
+      </div>
+    </label>
+    
+    <label  className='label'>
+      <p className="label-txt">Password</p>
+      <input  onChange={handleChange('password')} type="text" className="input" value={password} />
+      <div className="line-box">
+        <div className="line"></div>
+      </div>
+    </label>
+    <button className='button' onClick={clickSubmit} type="submit">Login</button>
+  </form>
     );
 
     const showError = () => (
@@ -109,12 +95,12 @@ const Signin = () => {
 
     return (
         <div>
-
-            <div
-                title="Signin"
-                description="Signin to Node React E-commerce App"
-                className="container col-md-12 offset-md-2 m-5"
-            >
+        <Menu />
+            
+               <div className="container col-md-8 offset-md-2">
+                <div className='text-center mt-3'>
+                    <h1 className='title'>Login</h1>
+                    </div>
                 {showLoading()}
                 {showError()}
                 {signUpForm()}
