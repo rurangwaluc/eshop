@@ -1,7 +1,23 @@
 /**
  * border radius
  */
+/* ---------------------------------------------------
+ CONTENT STYLE
+----------------------------------------------------- */
+#navbar-content {
+  width: 100%;
+  padding: 20px;
+  transition: all 0.3s;
+  box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.1);
 
+}
+
+#navbar-btn {
+  background: #F80;
+  color: #fff;
+}
+
+/* end of CONTENT STYLE */
 .btn,
 .jumbotron,
 .nav :hover {

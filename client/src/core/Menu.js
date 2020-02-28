@@ -14,46 +14,49 @@ const isActive = (history, path) => {
 };
 
 const Menu = ({ history }) => (
-    <div id='menu' className="container row mt-3 border-0">
+     <div id="navbar-content" className='container '>
 
-        <div id='fav' className="col-lg-3 col-md-3 col-sm-3 text-center">
-            <img id='fav' src={img} alt="img"/>
-        </div>
-        <div className="col-lg-8 col-md-8 col-sm-8 text-center  pr-0">
-            <ul id='nav1' className="nav nav-tabs text-dark bg-white  ">
+        <nav className="navbar navbar-expand-lg navbar-light ">
+            <div className="container-fluid">
+                            <img id='fav' src={img} alt="img"/>
 
+                <button id='navbar-btn' className="btn  d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i className="fas fa-align-justify"></i>
+                </button>
 
-                <li className="nav-item">
-                    <Link
-                        className="nav-link"
-                        style={isActive(history, "/")}
-                        to="/"
-                    >
-                        Home
-                </Link>
-                </li>
-
-                <li className="nav-item">
-                    <Link
-                        className="nav-link"
-                        style={isActive(history, "/shop")}
-                        to="/shop"
-                    >
-                        Shop
-                </Link>
-                </li>
-
-                <li className="nav-item">
-                    <Link
-                        className="nav-link cart-icon"
-                        style={isActive(history, "/cart")}
-                        to="/cart"
-                    >
-                        <i className="fas fa-shopping-cart"></i>{' '}
-                        <sup> <span className='item-count'>{itemTotal()}</span></sup>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="nav navbar-nav ml-auto">
+                        <li className="nav-item active">
+                            <Link
+                            className="nav-link"
+                            style={isActive(history, "/")}
+                            to="/"
+                        >
+                            Home
                     </Link>
-                </li>
-
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                            className="nav-link"
+                            style={isActive(history, "/shop")}
+                            to="/shop"
+                        >
+                            Shop
+                    </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                            className="nav-link cart-icon"
+                            style={isActive(history, "/cart")}
+                            to="/cart"
+                        >
+                            <i className="fas fa-shopping-cart"></i>{' '}
+                            <sup> <span className='item-count'>{itemTotal()}</span></sup>
+                        </Link>
+                        </li>
+                        
                 {isAuthenticated() && isAuthenticated().user.role === 0 && (
                     <li className="nav-item">
                         <Link
@@ -117,8 +120,12 @@ const Menu = ({ history }) => (
                     </span>
                     </li>
                 )}
-            </ul>
-        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
     </div>
 );
 
