@@ -59,6 +59,7 @@ const ManageProducts = () => {
                                     </span>
                                 </Link>
                                 <span
+                                style={{cursor: 'pointer'}}
                                     onClick={() => destroy(p._id)}
                                     className="badge badge-danger badge-pill"
                                 >

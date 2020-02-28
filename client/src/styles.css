@@ -5,10 +5,11 @@
  CONTENT STYLE
 ----------------------------------------------------- */
 #navbar-content {
+  margin-top: 10px;
   width: 100%;
   padding: 20px;
   transition: all 0.3s;
-  box-shadow: 6px 7px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 6px 7px 2px 1px rgba(0, 0, 0, 0.1);
 
 }
 
