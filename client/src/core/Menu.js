@@ -106,9 +106,9 @@ const Menu = ({ history }) => (
                 )}
 
                 {isAuthenticated() && (
-                    <li className="nav-item">
+                    <li className="nav-item m-auto ">
                         <span
-                            className="nav-link text-dark"
+                            className="nav-link text-dark mb-2"
                             style={{ cursor: "pointer", color: "#ffffff" }}
                             onClick={() =>
                                 signout(() => {
