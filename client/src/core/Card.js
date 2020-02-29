@@ -99,7 +99,9 @@ const Card = ({
   return (
 
     <div id='bt' className="border">
-      <div id='c' className="h1 text-center bg-white">{product.name}</div>
+      <div id='c' className=" text-center bg-white">
+    <h3 id='card-h3' className='mt-3 mb-3 font-italic'>  {product.name}</h3>
+      </div>
       <div className="text-center">
         {shouldRedirect(redirect)}
         <ShowImage item={product} url='product' />

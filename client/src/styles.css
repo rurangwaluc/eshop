@@ -55,6 +55,18 @@
 
 }
 
+#home-hd {
+  color: #F80;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+}
+
+#card-h3 {
+  color: gray;
+  font-family: 'Courier', sans-serif;
+  font-weight: 600;
+}
+
 #fav {
   width: 4rem;
   height: 4rem;
