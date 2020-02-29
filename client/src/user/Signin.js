@@ -55,7 +55,7 @@ const Signin = () => {
     
     <label  className='label'>
       <p className="label-txt">Password</p>
-      <input  onChange={handleChange('password')} type="text" className="input" value={password} />
+      <input  onChange={handleChange('password')} type="password" className="input" value={password} />
       <div className="line-box">
         <div className="line"></div>
       </div>
